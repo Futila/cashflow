@@ -40,3 +40,4 @@ C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\obj\Debug\
 C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\obj\Debug\net8.0\CashFlow.Api.pdb
 C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\obj\Debug\net8.0\CashFlow.Api.genruntimeconfig.cache
 C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\obj\Debug\net8.0\ref\CashFlow.Api.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\obj\Debug\net8.0\CashFlow.Api.sourcelink.json
