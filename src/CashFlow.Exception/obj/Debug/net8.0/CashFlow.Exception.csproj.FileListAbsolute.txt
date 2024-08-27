@@ -1,0 +1,11 @@
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\bin\Debug\net8.0\CashFlow.Exception.deps.json
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\bin\Debug\net8.0\CashFlow.Exception.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\bin\Debug\net8.0\CashFlow.Exception.pdb
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\CashFlow.Exception.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\CashFlow.Exception.AssemblyInfoInputs.cache
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\CashFlow.Exception.AssemblyInfo.cs
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\CashFlow.Exception.csproj.CoreCompileInputs.cache
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\CashFlow.Exception.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\refint\CashFlow.Exception.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\CashFlow.Exception.pdb
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Exception\obj\Debug\net8.0\ref\CashFlow.Exception.dll
