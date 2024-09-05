@@ -10,10 +10,10 @@ public class ExceptionFilter : IExceptionFilter
     //Every Exception triggered in the application will be redirected to this function
     public void OnException(ExceptionContext context)
     {
-       if(context.Exception is ErrorOnValidationException)
+       if(context.Exception is CashFlowException)
         {
             HandleProjectException(context);
-            HandleProjectException(context);
+   
         }else
         {
             ThrowUnknownError(context);
@@ -26,7 +26,7 @@ public class ExceptionFilter : IExceptionFilter
     {
         if (context.Exception is ErrorOnValidationException) 
         {
-            //Cast
+            //Convert the Exception as an ErrorOnValidationException
             var ex = (ErrorOnValidationException)context.Exception;
 
             var errorResponse = new ResponseErrorJson(ex.Errors);
@@ -38,6 +38,11 @@ public class ExceptionFilter : IExceptionFilter
         else
         {
 
+            var errorResponse = new ResponseErrorJson(context.Exception.Message);
+
+            context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+            context.Result = new BadRequestObjectResult(errorResponse);
         }
     }
 
