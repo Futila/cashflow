@@ -10,6 +10,7 @@
         "dependencies": {
           "CashFlow.Application": "1.0.0",
           "CashFlow.Communication": "1.0.0",
+          "CommonTestUtilities": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.8.0",
           "coverlet.collector": "6.0.0",
           "xunit": "2.5.3",
@@ -17,6 +18,14 @@
         },
         "runtime": {
           "Validator.Tests.dll": {}
+        }
+      },
+      "Bogus/35.6.1": {
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "assemblyVersion": "35.6.1.0",
+            "fileVersion": "35.6.1.0"
+          }
         }
       },
       "coverlet.collector/6.0.0": {},
@@ -1066,6 +1075,15 @@
             "locale": "pt-PT"
           }
         }
+      },
+      "CommonTestUtilities/1.0.0": {
+        "dependencies": {
+          "Bogus": "35.6.1",
+          "CashFlow.Communication": "1.0.0"
+        },
+        "runtime": {
+          "CommonTestUtilities.dll": {}
+        }
       }
     }
   },
@@ -1074,6 +1092,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Bogus/35.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QPJ8zLL0ScEunEoUNhMDigD4ykA/n7vXCZUQdGCFGHBfP2mNYjiCzR9Cj12eaFaDlwkhIC1HKQZihWl8OgbLsw==",
+      "path": "bogus/35.6.1",
+      "hashPath": "bogus.35.6.1.nupkg.sha512"
     },
     "coverlet.collector/6.0.0": {
       "type": "package",
@@ -1721,6 +1746,11 @@
       "sha512": ""
     },
     "CashFlow.Exception/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommonTestUtilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

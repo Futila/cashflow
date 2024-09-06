@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "T7ttJRoLtSE=",
+  "dgSpecHash": "tvVW5nL9FcI=",
   "success": true,
   "projectFilePath": "C:\\workspace\\courses\\rocketseat\\C#\\projects\\CashFlow\\tests\\Validator.Tests\\Validator.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Futila\\.nuget\\packages\\bogus\\35.6.1\\bogus.35.6.1.nupkg.sha512",
     "C:\\Users\\Futila\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Futila\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\Futila\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

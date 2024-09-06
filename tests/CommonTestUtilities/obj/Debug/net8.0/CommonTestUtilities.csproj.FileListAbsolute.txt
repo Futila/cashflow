@@ -1,0 +1,16 @@
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\bin\Debug\net8.0\CommonTestUtilities.deps.json
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\bin\Debug\net8.0\CommonTestUtilities.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\bin\Debug\net8.0\CommonTestUtilities.pdb
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\bin\Debug\net8.0\CashFlow.Communication.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\bin\Debug\net8.0\CashFlow.Communication.pdb
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.csproj.AssemblyReference.cache
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.AssemblyInfoInputs.cache
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.AssemblyInfo.cs
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.csproj.CoreCompileInputs.cache
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.sourcelink.json
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTe.14C365E1.Up2Date
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\refint\CommonTestUtilities.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\CommonTestUtilities.pdb
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\tests\CommonTestUtilities\obj\Debug\net8.0\ref\CommonTestUtilities.dll
