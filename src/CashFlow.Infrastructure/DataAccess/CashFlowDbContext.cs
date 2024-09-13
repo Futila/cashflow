@@ -13,7 +13,9 @@ public class CashFlowDbContext: DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
 
-        var connectionString = "Server=localhost;Database=cashflowdb;Uid=root;Pwd=";
+        var password = "";
+
+        var connectionString = $"Server=localhost;Database=cashflowdb;Uid=root;Pwd={password}";
 
         var version = new Version(8,0,39);
 
