@@ -7,7 +7,7 @@ namespace CashFlow.Infrastructure;
 
 public static class DependencyInjectionExtension
 {
-    public static void AddInfrastructure(IServiceCollection services)
+    public static void AddInfrastructure(this IServiceCollection services)
     {
         services.AddScoped<IExpensesRepository, ExpensesRepository>();
     }

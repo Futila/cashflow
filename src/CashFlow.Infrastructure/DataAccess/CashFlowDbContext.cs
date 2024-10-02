@@ -15,7 +15,7 @@ internal class CashFlowDbContext: DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
 
-        var password = "";
+        var password = "futila123#";
 
         var connectionString = $"Server=localhost;Database=cashflowdb;Uid=root;Pwd={password}";
 

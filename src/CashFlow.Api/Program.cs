@@ -1,6 +1,6 @@
 using CashFlow.Api.Filters;
 using CashFlow.Api.Middleware;
-using CashFlow.Domain.Repositories;
+using CashFlow.Application;
 using CashFlow.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +18,7 @@ builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)))
 //Configuring Dependency Injection for the Repository
 //DependencyInjectionExtension.AddInfrastructure(builder.Services);
 builder.Services.AddInfrastructure();
+builder.Services.AddApplication();
 
 builder.Services.AddRouting(option => option.LowercaseUrls = true);
 

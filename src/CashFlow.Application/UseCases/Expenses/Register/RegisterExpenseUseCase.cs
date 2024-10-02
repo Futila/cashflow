@@ -3,18 +3,24 @@ using CashFlow.Communication.Enums;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using CashFlow.Domain.Entities;
+using CashFlow.Domain.Repositories;
 using CashFlow.Exception.ExceptionsBase;
-using CashFlow.Infrastructure.DataAccess;
+
 
 namespace CashFlow.Application.UseCases.Expenses.Register;
 
-public class RegisterExpenseUseCase
+public class RegisterExpenseUseCase: IRegisterExpenseUseCase
 {
+    private readonly IExpensesRepository _repository;
+
+    //Param: repositoy. receipt parameter in the constructor that will be an instance injected by the dependency injection service.
+    public RegisterExpenseUseCase(IExpensesRepository repository)
+    {
+        _repository = repository;
+    }
     public ResponseRegisteredExpenseJson Execute (RequestRegisterExpenseJson request)
     {
         validate(request);
-
-        var dbContext = new CashFlowDbContext();
 
         var entity = new Expense
         {
@@ -25,11 +31,8 @@ public class RegisterExpenseUseCase
             PaymentType= (Domain.Enums.PaymentType)request.PaymentType,
         };
 
-        //Here is just preparing the query and not saving in the database
-        dbContext.Expenses.Add(entity);
-
-        //Now, we're saving the datas in the Database
-        dbContext.SaveChanges();
+     
+        _repository.Add(entity);
 
         return new ResponseRegisteredExpenseJson();
      
