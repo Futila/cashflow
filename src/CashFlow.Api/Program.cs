@@ -1,5 +1,7 @@
 using CashFlow.Api.Filters;
 using CashFlow.Api.Middleware;
+using CashFlow.Domain.Repositories;
+using CashFlow.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
+//Configuring Dependency Injection for the Repository
+//DependencyInjectionExtension.AddInfrastructure(builder.Services);
+builder.Services.AddInfrastructure();
+
 builder.Services.AddRouting(option => option.LowercaseUrls = true);
 
 var app = builder.Build();
@@ -20,7 +26,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
+    app.UseSwagger(); 
     app.UseSwaggerUI();
 }
 

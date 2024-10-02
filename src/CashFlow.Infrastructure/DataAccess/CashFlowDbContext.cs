@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CashFlow.Infrastructure.DataAccess;
 
-public class CashFlowDbContext: DbContext 
+
+//"internal" Ensure that CashFlowDbContext is only used in the infrastructure project
+internal class CashFlowDbContext: DbContext 
 {
     //Expenses will always be the name of the table on the database
     public DbSet<Expense> Expenses { get; set; }
