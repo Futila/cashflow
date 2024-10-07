@@ -50,3 +50,4 @@ C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\bin\Debug\
 C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\bin\Debug\net8.0\MySqlConnector.dll
 C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\workspace\courses\rocketseat\C#\projects\CashFlow\src\CashFlow.Api\bin\Debug\net8.0\AutoMapper.dll
