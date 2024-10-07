@@ -21,7 +21,7 @@ public class RegisterExpenseUseCase: IRegisterExpenseUseCase
         _unitOfWork = unitOfWork;
 
     }
-    public ResponseRegisteredExpenseJson Execute (RequestRegisterExpenseJson request)
+    public async Task<ResponseRegisteredExpenseJson> Execute (RequestRegisterExpenseJson request)
     {
         validate(request);
 
@@ -35,10 +35,10 @@ public class RegisterExpenseUseCase: IRegisterExpenseUseCase
         };
 
      
-        _repository.Add(entity);
-        _unitOfWork.Commit();
+        await _repository.Add(entity);
+        await _unitOfWork.Commit();
 
-        return new ResponseRegisteredExpenseJson();
+       return new ResponseRegisteredExpenseJson();
      
     }
 
