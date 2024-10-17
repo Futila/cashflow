@@ -1,6 +1,7 @@
 ﻿
 using CashFlow.Domain.Entities;
 using CashFlow.Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace CashFlow.Infrastructure.DataAccess.Repositories;
 
@@ -27,5 +28,12 @@ internal class ExpensesRepository : IExpensesRepository
 
        await _dbContext.Expenses.AddAsync(expense);
   
+    }
+
+    public async Task<List<Expense>> GetAll()
+    {
+        //ToListAsync() - will actually execute the select query to bring all
+        //expenses from the table and return it as a list of expenses
+        return await _dbContext.Expenses.ToListAsync();
     }
 }
