@@ -34,6 +34,12 @@ internal class ExpensesRepository : IExpensesRepository
     {
         //ToListAsync() - will actually execute the select query to bring all
         //expenses from the table and return it as a list of expenses
-        return await _dbContext.Expenses.ToListAsync();
+
+        return await _dbContext.Expenses.AsNoTracking().ToListAsync();
+    }
+
+    public async Task<Expense ?> GetById(long id)
+    {
+        return await _dbContext.Expenses.AsNoTracking().FirstOrDefaultAsync(expense => expense.Id == id);
     }
 }
