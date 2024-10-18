@@ -40,6 +40,9 @@ internal class ExpensesRepository : IExpensesRepository
 
     public async Task<Expense ?> GetById(long id)
     {
+        // FirstOrDefaultAsync - If it does not find a match for that id,
+        // it will return the default of that type, which is an entity (class),
+        // and the default of a class when not instantiated is null
         return await _dbContext.Expenses.AsNoTracking().FirstOrDefaultAsync(expense => expense.Id == id);
     }
 }

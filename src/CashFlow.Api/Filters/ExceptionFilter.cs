@@ -21,16 +21,20 @@ public class ExceptionFilter : IExceptionFilter
         }
     }
 
-
-
     private void HandleProjectException(ExceptionContext context)
     {
-        if (context.Exception is ErrorOnValidationException) 
+        //Convert the Exception as an ErrorOnValidationException
+        if (context.Exception is ErrorOnValidationException errorOnValidationException)
         {
-            //Convert the Exception as an ErrorOnValidationException
-            var ex = (ErrorOnValidationException)context.Exception;
+            var errorResponse = new ResponseErrorJson(errorOnValidationException.Errors);
 
-            var errorResponse = new ResponseErrorJson(ex.Errors);
+            context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+            context.Result = new BadRequestObjectResult(errorResponse);
+        }
+        else if(context.Exception is NotFoundException notFoundException)
+        {
+            var errorResponse = new ResponseErrorJson(notFoundException.Message);
 
             context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
