@@ -12,13 +12,13 @@ namespace CashFlow.Application.UseCases.Expenses.Register;
 
 public class RegisterExpenseUseCase: IRegisterExpenseUseCase
 {
-    private readonly IExpensesRepository _repository;
+    private readonly IExpensesWriteOnlyRepository _repository;
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
 
     //Param: repositoy. receipt parameter in the constructor that will be an instance injected by the dependency injection service.
     public RegisterExpenseUseCase(
-        IExpensesRepository repository, 
+        IExpensesWriteOnlyRepository repository, 
         IUnitOfWork unitOfWork, 
         IMapper mapper)
     {

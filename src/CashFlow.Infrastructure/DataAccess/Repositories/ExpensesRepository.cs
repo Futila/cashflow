@@ -12,7 +12,7 @@ namespace CashFlow.Infrastructure.DataAccess.Repositories;
  * we need in relation to operations in our repository (add, remove, update expenses)
  * 
  * */
-internal class ExpensesRepository : IExpensesRepository
+internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteOnlyRepository
 {
 
     private readonly CashFlowDbContext _dbContext;
