@@ -70,7 +70,7 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Despesa não encontrada..
+        ///   Looks up a localized string similar to Expense not found.
         /// </summary>
         public static string EXPENSE_NOT_FOUND {
             get {

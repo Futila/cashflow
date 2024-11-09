@@ -23,12 +23,27 @@ public class ExceptionFilter : IExceptionFilter
 
     private void HandleProjectException(ExceptionContext context)
     {
+
+
+        // If context.Exception is not a CashFlowException, an exception will be trown
+        var cashFlowException = (CashFlowException)context.Exception;
+
+        var errorResponse = new ResponseErrorJson(cashFlowException.GetErrors());
+
+
+        context.HttpContext.Response.StatusCode = cashFlowException.StatusCode;
+        context.Result = new ObjectResult(errorResponse);
+
+
+
+        //THIS CODE BELOW WAS IMPLEMENTED BEFORE THE USAGE O SOLID PRINCIPLE "OPEN CLOSED"
+
         //Convert the Exception as an ErrorOnValidationException
-        if (context.Exception is ErrorOnValidationException errorOnValidationException)
+        /*if (context.Exception is ErrorOnValidationException errorOnValidationException)
         {
             var errorResponse = new ResponseErrorJson(errorOnValidationException.Errors);
 
-            context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+            context.HttpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
 
             context.Result = new BadRequestObjectResult(errorResponse);
         }
@@ -36,7 +51,7 @@ public class ExceptionFilter : IExceptionFilter
         {
             var errorResponse = new ResponseErrorJson(notFoundException.Message);
 
-            context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+            context.HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
 
             context.Result = new BadRequestObjectResult(errorResponse);
         }
@@ -48,7 +63,7 @@ public class ExceptionFilter : IExceptionFilter
             context.HttpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
             context.Result = new BadRequestObjectResult(errorResponse);
-        }
+        }*/
     }
 
     private void ThrowUnknownError(ExceptionContext context)
