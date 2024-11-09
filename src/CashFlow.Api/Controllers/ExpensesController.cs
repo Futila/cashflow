@@ -2,6 +2,7 @@
 using CashFlow.Application.UseCases.Expenses.GetAll;
 using CashFlow.Application.UseCases.Expenses.GetById;
 using CashFlow.Application.UseCases.Expenses.Register;
+using CashFlow.Application.UseCases.Expenses.Update;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using CashFlow.Exception.ExceptionsBase;
@@ -17,7 +18,7 @@ public class ExpensesController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Register(
         [FromServices] IRegisterExpenseUseCase useCase,
-        [FromBody] RequestRegisterExpenseJson request)
+        [FromBody] RequestExpenseJson request)
     {
         
 
@@ -65,7 +66,7 @@ public class ExpensesController : ControllerBase
     }
 
 
-    // Route to dele an expense
+    // Route to delete an expense
 
     [HttpDelete]
     [Route("{id}")]
@@ -80,5 +81,25 @@ public class ExpensesController : ControllerBase
 
         return NoContent();
 
+    }
+
+    // Route to update an expense
+
+    [HttpPut]
+    [Route("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(typeof(ResponseErrorJson),  StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ResponseErrorJson), StatusCodes.Status404NotFound)]
+
+    public async Task<IActionResult> Update(
+        [FromServices] IUpdateExpenseUseCase useCase,
+        [FromRoute] long id,
+        [FromBody] RequestExpenseJson request
+        
+     )
+    {
+        await useCase.Execute(id, request);
+
+        return NoContent();
     }
 }

@@ -8,11 +8,10 @@ namespace CashFlow.Infrastructure.DataAccess.Repositories;
 
 /*
  * the class remains internal so that this class is not used within the api project
- * class that will be responsible for implementing everything 
- * we need in relation to operations in our repository (add, remove, update expenses)
+ * class that will be responsible for implementing everything  we need in relation to operations in our repository (add, remove, update expenses)
  * 
  * */
-internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteOnlyRepository
+internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteOnlyRepository, IExpensesUpdateOnlyRepository
 {
 
     private readonly CashFlowDbContext _dbContext;
@@ -58,5 +57,16 @@ internal class ExpensesRepository : IExpensesReadOnlyRepository, IExpensesWriteO
         // it will return the default of that type, which is an entity (class),
         // and the default of a class when not instantiated is null
         return await _dbContext.Expenses.AsNoTracking().FirstOrDefaultAsync(expense => expense.Id == id);
+    }
+
+
+    async Task<Expense?> IExpensesUpdateOnlyRepository.GetById(long id)
+    {
+        return await _dbContext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id);
+    }
+
+    public void Update(Expense expense)
+    {
+        _dbContext.Expenses.Update(expense);
     }
 }
